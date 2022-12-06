@@ -2,6 +2,7 @@ $color-primary: hsl(322, 100%, 66%);
 $color-secondary: hsl(193, 100%, 96%);
 $color-heading: hsl(192, 100%, 9%);
 $color-body: hsl(208, 11%, 55%);
+$color-white: #fff;
 *,
 *::after,
 *::before {
@@ -27,6 +28,7 @@ body {
 h1,
 h2 {
   color: $color-heading;
+  font-family: "Poppins", sans-serif;
 }
 h1 {
   font-size: 3rem;
@@ -42,5 +44,73 @@ h2 {
   }
   h2 {
     font-size: 3rem;
+  }
+}
+
+// Links
+
+a {
+  text-decoration: none;
+  color: $color-secondary;
+  font-size: 2.2rem;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  a {
+    font-size: 1.8rem;
+  }
+}
+
+// Buttons
+.btn {
+  padding: 1.5rem 7.5rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.4rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  display: block;
+  color: $color-heading;
+
+  &--primary {
+    background-color: $color-primary;
+    color: $color-secondary;
+    box-shadow: 0 5px 10px 0 transparentize($color-primary, $amount: 0.7);
+    transition: background-color 0.15s ease-out;
+    &:hover {
+      background-color: lighten($color-primary, $amount: 10%);
+    }
+  }
+  &--white {
+    background-color: $color-white;
+    box-shadow: 0 5px 20px 0 transparentize($color: #000000, $amount: 0.9);
+    padding: 0.5rem 2.5rem;
+    font-size: 1.3rem;
+  }
+  &--lg {
+    font-size: 1.2rem;
+    padding: 1.5rem 6rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn {
+    padding: 2rem 7rem;
+    &--white {
+      font-size: 1.4rem;
+      padding: 1.5rem 7rem;
+      transition: color 0.15s ease-out;
+      &:hover {
+        color: transparentize($color-heading, $amount: 0.5);
+      }
+    }
+    &--lg {
+      font-size: 1.8rem;
+      padding: 3rem 11rem;
+    }
   }
 }
