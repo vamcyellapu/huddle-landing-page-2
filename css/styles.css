@@ -40,13 +40,18 @@ h2 {
     font-size: 3rem;
   }
 }
-a {
-  text-decoration: none;
+.link {
   color: hsl(193deg, 100%, 96%);
   font-size: 2.2rem;
+  text-decoration: none;
+  transition: all 0.15s ease-out;
 }
-a:hover {
+.link:hover {
   text-decoration: underline;
+}
+.link__icon:hover {
+  color: hsl(322deg, 100%, 66%);
+  text-decoration: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -101,4 +106,21 @@ a:hover {
     font-size: 1.8rem;
     padding: 3rem 11rem;
   }
+}
+.icon {
+  font-size: 2rem;
+}
+.icon__container {
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid hsl(193deg, 100%, 96%);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  border-radius: 50%;
+  transition: border-color 0.15s ease-out;
+}
+.icon__container:hover {
+  border-color: hsl(322deg, 100%, 66%);
 }/*# sourceMappingURL=styles.css.map */

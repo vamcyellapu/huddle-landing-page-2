@@ -49,12 +49,19 @@ h2 {
 
 // Links
 
-a {
-  text-decoration: none;
+.link {
   color: $color-secondary;
   font-size: 2.2rem;
+  text-decoration: none;
+  transition: all 0.15s ease-out;
   &:hover {
     text-decoration: underline;
+  }
+  &__icon {
+    &:hover {
+      color: $color-primary;
+      text-decoration: none;
+    }
   }
 }
 
@@ -111,6 +118,26 @@ a {
     &--lg {
       font-size: 1.8rem;
       padding: 3rem 11rem;
+    }
+  }
+}
+
+// Icons
+.icon {
+  font-size: 2rem;
+
+  &__container {
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid $color-secondary;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    border-radius: 50%;
+    transition: border-color 0.15s ease-out;
+    &:hover {
+      border-color: $color-primary;
     }
   }
 }
