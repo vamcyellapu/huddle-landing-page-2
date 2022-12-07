@@ -131,10 +131,16 @@ h2 {
   justify-items: center;
   gap: 5rem;
   padding: 3rem;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   max-width: 1234px;
   margin: 0 auto;
+}
+.media__container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 2rem;
 }
 .media__image {
   width: 100%;
@@ -156,6 +162,11 @@ h2 {
   .media {
     grid-template-columns: repeat(2, 1fr);
     padding: 5rem;
+  }
+  .media:nth-of-type(even) .media__image {
+    grid-column: 1/2;
+    justify-self: start;
+    margin-left: 2rem;
   }
   .media__image {
     grid-column: 2/3;
