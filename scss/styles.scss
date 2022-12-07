@@ -141,3 +141,51 @@ h2 {
     }
   }
 }
+
+// Media
+.media {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 5rem;
+  padding: 3rem;
+  box-shadow: 0 0 20px 0 transparentize($color: #000000, $amount: 0.9);
+  border-radius: 10px;
+  max-width: 1234px;
+  margin: 0 auto;
+
+  &__image {
+    width: 100%;
+    grid-row: 1/2;
+    object-fit: cover;
+    max-width: 40rem;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .media {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5rem;
+    &__image {
+      grid-column: 2/3;
+      max-width: 40rem;
+      justify-self: end;
+    }
+    &__heading {
+      align-self: flex-start;
+    }
+    &__content {
+      text-align: left;
+      max-width: 50rem;
+      margin-left: 2rem;
+    }
+  }
+}

@@ -123,4 +123,51 @@ h2 {
 }
 .icon__container:hover {
   border-color: hsl(322deg, 100%, 66%);
+}
+
+.media {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 5rem;
+  padding: 3rem;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 1234px;
+  margin: 0 auto;
+}
+.media__image {
+  width: 100%;
+  grid-row: 1/2;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 40rem;
+}
+.media__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .media {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5rem;
+  }
+  .media__image {
+    grid-column: 2/3;
+    max-width: 40rem;
+    justify-self: end;
+  }
+  .media__heading {
+    align-self: flex-start;
+  }
+  .media__content {
+    text-align: left;
+    max-width: 50rem;
+    margin-left: 2rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
